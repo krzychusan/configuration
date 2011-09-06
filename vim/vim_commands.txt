@@ -1,0 +1,139 @@
+VIM
+
+Autocompletition C++
+:helptags $HOME/.vim/doc 
+:h omnicppcomplete
+• :set filetype? //musi byc na cpp
+• <C-N> and <C-P> to navigate
+• <C-X><C-O> otwiera manualnie podpowiedzi
+• :TlistToggle - wczesniej :helptags .
+• Ctrl + ] szuka def, Ctrl+t powrot
+• o - otwiera tag w nowym oknie, p i P przechodza do niego, t otwiera w nowej zakladce
+•    :TlistAddFiles /my/project/dir/*.c - i nie potrzeba ich otwierac do bufora
+•  ":TlistUpdate" aktualizuje aktualny bufor
+• NerdTree - wcisnac 'm' potem 'a' tworzy nowy plik
+PYDOC
+
+
+
+PLUGINS
+Ctrl + ] - jump to definition
+<C-X><C-O> - jump to previous place
+<C-t> - the same as above
+
+
+o.......Open files, directories and bookmarks....................|NERDTree-o|
+go......Open selected file, but leave cursor in the NERDTree.....|NERDTree-go|
+t.......Open selected node/bookmark in a new tab.................|NERDTree-t|
+T.......Same as 't' but keep the focus on the current tab........|NERDTree-T|
+i.......Open selected file in a split window.....................|NERDTree-i|
+gi......Same as i, but leave the cursor on the NERDTree..........|NERDTree-gi|
+s.......Open selected file in a new vsplit.......................|NERDTree-s|
+gs......Same as s, but leave the cursor on the NERDTree..........|NERDTree-gs|
+O.......Recursively open the selected directory..................|NERDTree-O|
+x.......Close the current nodes parent...........................|NERDTree-x|
+X.......Recursively close all children of the current node.......|NERDTree-X|
+e.......Edit the current dif.....................................|NERDTree-e|
+
+
+  nnoremap <silent> sj     :FufBuffer<CR>
+  nnoremap <silent> sk     :FufFileWithCurrentBufferDir<CR>
+  nnoremap <silent> sK     :FufFileWithFullCwd<CR>
+  nnoremap <silent> s<C-k> :FufFile<CR>
+  nnoremap <silent> sl     :FufCoverageFileChange<CR>
+  nnoremap <silent> sL     :FufCoverageFileChange<CR>
+  nnoremap <silent> s<C-l> :FufCoverageFileRegister<CR>
+  nnoremap <silent> sd     :FufDirWithCurrentBufferDir<CR>
+  nnoremap <silent> sD     :FufDirWithFullCwd<CR>
+  nnoremap <silent> s<C-d> :FufDir<CR>
+  nnoremap <silent> sn     :FufMruFile<CR>
+  nnoremap <silent> sN     :FufMruFileInCwd<CR>
+  nnoremap <silent> sm     :FufMruCmd<CR>
+  nnoremap <silent> su     :FufBookmarkFile<CR>
+  nnoremap <silent> s<C-u> :FufBookmarkFileAdd<CR>
+  vnoremap <silent> s<C-u> :FufBookmarkFileAddAsSelectedText<CR>
+  nnoremap <silent> si     :FufBookmarkDir<CR>
+  nnoremap <silent> s<C-i> :FufBookmarkDirAdd<CR>
+  nnoremap <silent> st     :FufTag<CR>
+  nnoremap <silent> sT     :FufTag!<CR>
+  nnoremap <silent> s<C-]> :FufTagWithCursorWord!<CR>
+  nnoremap <silent> s,     :FufBufferTag<CR>
+  nnoremap <silent> s<     :FufBufferTag!<CR>
+  vnoremap <silent> s,     :FufBufferTagWithSelectedText!<CR>
+  vnoremap <silent> s<     :FufBufferTagWithSelectedText<CR>
+  nnoremap <silent> s}     :FufBufferTagWithCursorWord!<CR>
+  nnoremap <silent> s.     :FufBufferTagAll<CR>
+  nnoremap <silent> s>     :FufBufferTagAll!<CR>
+  vnoremap <silent> s.     :FufBufferTagAllWithSelectedText!<CR>
+  vnoremap <silent> s>     :FufBufferTagAllWithSelectedText<CR>
+  nnoremap <silent> s]     :FufBufferTagAllWithCursorWord!<CR>
+  nnoremap <silent> sg     :FufTaggedFile<CR>
+  nnoremap <silent> sG     :FufTaggedFile!<CR>
+  nnoremap <silent> so     :FufJumpList<CR>
+  nnoremap <silent> sp     :FufChangeList<CR>
+  nnoremap <silent> sq     :FufQuickfix<CR>
+  nnoremap <silent> sy     :FufLine<CR>
+  nnoremap <silent> sh     :FufHelp<CR>
+  nnoremap <silent> se     :FufEditDataFile<CR>
+  nnoremap <silent> sr     :FufRenewCache<CR>
+
+
+Key           Description
+
+  <CR>          Jump to the location where the tag under cursor is
+                defined.
+  o             Jump to the location where the tag under cursor is
+                defined in a new window.
+  P             Jump to the tag in the previous (Ctrl-W_p) window.
+  p             Display the tag definition in the file window and
+                keep the cursor in the taglist window itself.
+  t             Jump to the tag in a new tab. If the file is already
+                opened in a tab, move to that tab.
+  Ctrl-t        Jump to the tag in a new tab.
+  <Space>       Display the prototype of the tag under the cursor.
+                For file names, display the full path to the file,
+                file type and the number of tags. For tag types, display the
+                tag type and the number of tags.
+  u             Update the tags listed in the taglist window
+  s             Change the sort order of the tags (by name or by order)
+  d             Remove the tags for the file under the cursor
+  x             Zoom-in or Zoom-out the taglist window
+  +             Open a fold
+  -             Close a fold
+  *             Open all folds
+  =             Close all folds
+  [[            Jump to the beginning of the previous file
+  <Backspace>   Jump to the beginning of the previous file
+  ]]            Jump to the beginning of the next file
+  <Tab>         Jump to the beginning of the next file
+  q             Close the taglist window
+  <F1>          Display help
+
+
+"CTRL-spacebar + s"     split window with definition vertically
+"CTRL-spacebar CTRL-spacebar s" - split window with definition horizontally
+:cs f <typ> <nazwa> - search for specified element, <typ> - s(symbol), g(global def), c(call to functions)
+
+
+cscope -b -q -k - tworzy baze plikow w aktualnym miejscu z pliku cscope.files
+find /my/project/dir -name '*.java' >/my/cscope/dir/cscope.files
+
+
+    "   's'   symbol: find all references to the token under cursor
+    "   'g'   global: find global definition(s) of the token under cursor
+    "   'c'   calls:  find all calls to the function name under cursor
+    "   't'   text:   find all instances of the text under cursor
+    "   'e'   egrep:  egrep search for the word under cursor
+    "   'f'   file:   open the filename under cursor
+    "   'i'   includes: find files that include the filename under cursor
+    "   'd'   called: find functions that function under cursor calls
+
+    nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>>.
+    nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>>.
+    nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>>.
+    nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>>.
+    nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>>.
+    nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>>.
+    nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>>.
+
