@@ -1,0 +1,14 @@
+
+#URxvt*transparent: true
+URxvt*tintColor: Blue
+#URxvt*shading: 40
+URxvt*saveLines: 12000
+URxvt*foreground: White
+URxvt*background: Black
+URxvt*font: xft:Source Code Pro:Regular:pixelsize=13:antialias=true:hinting=true
+URxvt*boldFont: xft:Source Code Pro:Bold:pixelsize=13:antialias=true:hinting=true
+URxvt*color4: RoyalBlue
+URxvt*color12: RoyalBlue
+URxvt*scrollBar: true
+URxvt*scrollBar_right: true
+URxvt*scrollstyle: rxvt
