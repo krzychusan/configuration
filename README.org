@@ -1,0 +1,6 @@
+* Repository for configuration backup
+** Terminator
+   website: [[http://software.jessies.org/terminator/][official site]]
+   install: sudo add-apt-repository ppa:gnome-terminator
+   Cool to work on distro without xmonad or any tilling window manager.
+** 
