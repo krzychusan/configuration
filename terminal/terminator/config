@@ -12,7 +12,7 @@
     cursor_color = "#ffffda"
     foreground_color = "#ffffff"
     show_titlebar = False
-    font = Anonymous Pro 12
+    font = Anonymous Pro 13
     background_color = "#2b2b2b"
 [layouts]
   [[default]]
