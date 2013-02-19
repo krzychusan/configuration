@@ -1,3 +1,7 @@
+"""""""""""""""""""""""""""
+" Default settings
+"""""""""""""""""""""""""""
+
 set history=10000
 
 filetype plugin on
@@ -75,16 +79,22 @@ set listchars=tab:>.,trail:.,extends:#,nbsp:. " Highlight problematic whitespace
 set gfn="Anonymous Pro 11"
 set guifont="Anonymous Pro 11"
 set shell=/bin/zsh
+set t_Co=256
+set background=dark
 if has("gui_running")
   set guioptions-=T
-  set t_Co=256
-  set background=dark
-  colorscheme wombat256mod
+  "colorscheme wombat256
+  "colorscheme inkpot
+  colorscheme darkspectrum
 else
-  colorscheme wombat
-  "colorscheme softblue
+  "colorscheme vividchalk
+  "colorscheme distinguished
+  "colorscheme twilight
+  "colorscheme wombat256
   "colorscheme wombat256mod
-  set background=dark
+  "colorscheme darkspectrum
+  colorscheme inkpot
+  "colorscheme desert256
 endif
 
 

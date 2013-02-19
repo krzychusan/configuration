@@ -1,6 +1,16 @@
 * Repository for configuration backup
-** Terminator
-   website: [[http://software.jessies.org/terminator/][official site]]
-   install: sudo add-apt-repository ppa:gnome-terminator
-   Cool to work on distro without xmonad or any tilling window manager.
-** 
+** terminal
+*** Terminator
+    website: [[http://software.jessies.org/terminator/][official site]]
+    install: sudo add-apt-repository ppa:gnome-terminator
+    Cool to work on distro without xmonad or any tilling window manager.
+*** zsh
+    website: [[http://zsh.org][official site]]
+    install: aptitude
+** fonts
+   A small set of programming fonts recommended to use.
+   With emacs best looks default Monospace font
+** vim
+   .vimrc configuration file with all cool settings
+   .vim directory with plugins and colors for vim
+
