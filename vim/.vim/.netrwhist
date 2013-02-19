@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/krzychusan'
-let g:netrw_dirhist_2='/home/krzychusan/.gconfd'
-let g:netrw_dirhist_3='/home/krzychusan'
-let g:netrw_dirhist_4='/home/krzychusan/.android'
-let g:netrw_dirhist_5='/home/krzychusan'
-let g:netrw_dirhist_6='/home/krzychusan/.gnome-commander'
-let g:netrw_dirhist_7='/home/krzychusan/.gnome-commander/plugins'
