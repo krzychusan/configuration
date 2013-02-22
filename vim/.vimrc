@@ -1,4 +1,10 @@
 """""""""""""""""""""""""""
+" Pathogen to handle plugins
+"""""""""""""""""""""""""""
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags() " generate helptags for everything
+
+"""""""""""""""""""""""""""
 " Default settings
 """""""""""""""""""""""""""
 
@@ -11,6 +17,12 @@ set autoread
 set nocompatible
 set showmatch
 set wildmenu
+
+set hidden "hides buffers instead of closing them
+
+" Write ofter and everything will be fine
+set nobackup
+set noswapfile
 
 let mapleader = ","
 let g:maplader = ","
@@ -117,4 +129,47 @@ map <silent> <leader><space> :noh<cr>
 " You don't need to keep Shift. Saves typing and avoid typos
 nnoremap ; :
 
+" Easy window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
+"""""""""""""""""""""""""""
+" FuzzyFinder
+"""""""""""""""""""""""""""
+"map <leader>sd  :FufBuffer<CR>
+"map <leader>sf  :FufFile! **/<CR>
+map <leader>sg  :FufFile<CR>
+map <leader>st  :FufTag<CR>
+map <leader>sr  :FufTagWithCursorWord<CR>
+
+map <leader>aj  :FufBookmarkFileAdd .<CR><backspace>
+map <leader>ak  :FufBookmarkFile<CR>
+"<C-j> (|g:fuf_keyOpenSplit|)   - opens in a split window. 
+"<C-k> (|g:fuf_keyOpenVsplit|)  - opens in a vertical-split window. 
+"<C-l> (|g:fuf_keyOpenTabpage|) - opens in a new tab page. 
+
+
+"""""""""""""""""""""""""""
+" CtrlP
+"""""""""""""""""""""""""""
+let g:ctrlp_regexp = 1      "regexp is better match
+let g:ctrlp_lazy_update = 1 "speeds up searching
+let g:ctrlp_prompt_mappings = { 'PrtAdd(".*")': ['<space>'] } "space works as .*
+map <leader>sf  :CtrlP<CR>
+map <leader>sd  :CtrlPBuffer<CR>
+"map <leader>sg  :CtrlP      "Allows to provide root directory
+"t - in a new tab
+"h - in a new horizontal split
+"v - in a new vertical split
+"r - in the current window
+
+
+"""""""""""""""""""""""""""
+" ghcmod
+"""""""""""""""""""""""""""
+map <leader>ct  :GhcModType<CR>
+map <leader>cg  :GhcModTypeClear<CR>
+map <leader>cj  :GhcModCheck<CR>
+map <leader>ck  :GhcModLint<CR>
