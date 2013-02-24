@@ -158,7 +158,7 @@ map <leader>ak  :FufBookmarkFile<CR>
 " CtrlP
 """""""""""""""""""""""""""
 let g:ctrlp_regexp = 1      "regexp is better match
-let g:ctrlp_lazy_update = 1 "speeds up searching
+"let g:ctrlp_lazy_update = 1 "speeds up searching
 let g:ctrlp_prompt_mappings = { 'PrtAdd(".*")': ['<space>'] } "space works as .*
 map <leader>sf  :CtrlP<CR>
 map <leader>sd  :CtrlPBuffer<CR>
