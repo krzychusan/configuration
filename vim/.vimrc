@@ -129,6 +129,9 @@ map <silent> <leader><space> :noh<cr>
 " You don't need to keep Shift. Saves typing and avoid typos
 nnoremap ; :
 
+" Execute command in current line
+map <leader>r   $v0:w !sh<CR>
+
 " Easy window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
